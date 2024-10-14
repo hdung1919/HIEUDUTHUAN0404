@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngôi Sao Lấp Lánh</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .hinh_ngoi_sao {
+            width: 0;
+            height: 0;
+            margin: 50px 0;
+            color: #ffec1e;
+            position: relative;
+            display: block;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid #ffec1e;
+            border-left: 100px solid transparent;
+            transform: rotate(35deg);
+            animation: move 2s infinite alternate, twinkle 1s infinite;
+        }
+
+        .hinh_ngoi_sao:before {
+            height: 0;
+            width: 0;
+            position: absolute;
+            display: block;
+            top: -45px;
+            left: -65px;
+            border-bottom: 80px solid #ffec1F;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            content: '';
+            transform: rotate(-35deg);
+        }
+
+        .hinh_ngoi_sao:after {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            display: block;
+            top: 3px;
+            left: -105px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid #ffec1F;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0) rotate(35deg);
+            }
+            100% {
+                transform: translateY(-10px) rotate(35deg);
+            }
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color: #ffec1e;">Ngôi Sao Lấp Lánh</h2>
+    <div class="hinh_ngoi_sao"></div>
+</body>
+</html>
